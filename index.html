@@ -1,59 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa" dir="rtl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Radjal</title>
+<title>RADJAL NEWS</title>
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
-.logo{
-    width: 10px;
-    height: 108px;
-    position: fixed;
-    top: 0px;
-}
+
 body{
     margin:0;
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    flex-direction:column;
     font-family:'Poppins',sans-serif;
-
     background:linear-gradient(135deg,#0f172a,#1e293b,#2563eb);
     color:white;
     text-align:center;
 }
 
-h1{
-    font-size:60px;
-    margin-bottom:20px;
+header{
+    padding:40px 20px;
 }
 
-p{
+h1{
+    font-size:60px;
+    margin-bottom:10px;
+}
+
+.subtitle{
     font-size:22px;
+    opacity:0.9;
+}
+
+.news{
+    max-width:900px;
+    margin:30px auto;
+    padding:20px;
+}
+
+.card{
+    background:rgba(255,255,255,0.1);
+    padding:20px;
+    margin-bottom:20px;
+    border-radius:15px;
+    text-align:right;
+}
+
+.card h2{
+    margin-top:0;
+}
+
+.card p{
+    line-height:1.8;
 }
 
 footer{
-    position:fixed;
-    bottom:15px;
-    font-size:14px;
+    margin-top:40px;
+    padding:20px;
     opacity:0.8;
 }
 </style>
+
 </head>
 
 <body>
-<img src="logo.png" alt="RADJAL Logo">
-<h1>Website is Online</h1>
 
-<p>The site has successfully launched.</p>
+<header>
+    <h1>RADJAL NEWS</h1>
+    <p class="subtitle">
+        آخرین اخبار فناوری، هوش مصنوعی، بازی و اینترنت
+    </p>
+</header>
+
+<div class="news">
+
+    <div class="card">
+        <h2>راه‌اندازی سایت خبری RADJAL</h2>
+        <p>
+            سایت خبری RADJAL به صورت رسمی راه‌اندازی شد.
+            در آینده اخبار فناوری، برنامه‌نویسی، هوش مصنوعی و بازی‌های ویدیویی در این وب‌سایت منتشر خواهد شد.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>اخبار فناوری</h2>
+        <p>
+            جدیدترین اخبار دنیای تکنولوژی، شرکت‌های بزرگ فناوری و پروژه‌های نوآورانه در این بخش قرار می‌گیرد.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>اخبار بازی‌ها</h2>
+        <p>
+            اخبار مربوط به ماینکرفت، فناف، روبلاکس و سایر بازی‌های محبوب در این قسمت منتشر می‌شود.
+        </p>
+    </div>
+
+</div>
 
 <footer>
-© Radjal Group
+    © 2026 Radjal Group - All Rights Reserved
 </footer>
 
 </body>
