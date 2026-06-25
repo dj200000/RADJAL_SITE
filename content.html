@@ -6,34 +6,83 @@
 <title>تماس با ما - RADJAL NEWS</title>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700;900&display=swap');
+
 body{
     margin:0;
-    font-family:tahoma;
-    background:linear-gradient(135deg,#0f172a,#1e293b,#2563eb);
+    font-family:'Vazirmatn',Tahoma,sans-serif;
+    background:#f4f4f4;
+}
+
+/* header مثل صفحه اصلی */
+header{
+    background:#0f172a;
     color:white;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
+    padding:15px;
+    box-shadow:0 2px 10px rgba(0,0,0,.2);
+}
+
+.logo{
+    font-size:34px;
+    font-weight:900;
+    letter-spacing:2px;
+}
+
+nav{
+    margin-top:12px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 12px;
+    font-weight:700;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#60a5fa;
+}
+
+/* صفحه تماس */
+.container{
+    max-width:800px;
+    margin:40px auto;
+    padding:20px;
 }
 
 .card{
-    background:rgba(255,255,255,0.1);
-    padding:40px;
-    border-radius:20px;
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
     text-align:center;
-    box-shadow:0 10px 30px rgba(0,0,0,0.3);
-    width:300px;
 }
 
-h1{
-    margin-bottom:20px;
+.card h1{
+    margin-top:0;
+    color:#0f172a;
 }
 
-a{
-    color:#60a5fa;
-    text-decoration:none;
-    font-weight:bold;
+.card p{
+    font-size:18px;
+    line-height:1.8;
+}
+
+.info{
+    margin-top:20px;
+    background:#f1f5f9;
+    padding:15px;
+    border-radius:10px;
+}
+
+/* footer */
+footer{
+    background:#0f172a;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
 }
 </style>
 
@@ -41,15 +90,43 @@ a{
 
 <body>
 
+<header>
+<div class="logo">RADJAL NEWS</div>
+
+<nav>
+<a href="index.html">خانه</a>
+<a href="#">فناوری</a>
+<a href="#">هوش مصنوعی</a>
+<a href="#">بازی‌ها</a>
+<a href="contact.html">تماس با ما</a>
+</nav>
+</header>
+
+<div class="container">
+
 <div class="card">
 <h1>تماس با ما</h1>
-<p>برای ارتباط با RADJAL NEWS</p>
 
-<p>📱 روبیکا: به زودی</p>
-<p>📧 ایمیل: به زودی</p>
+<p>
+برای ارتباط با تیم RADJAL NEWS می‌توانید از روش‌های زیر استفاده کنید:
+</p>
 
-<a href="index.html">← بازگشت به خانه</a>
+<div class="info">
+📱 روبیکا: به زودی<br>
+📧 ایمیل: به زودی<br>
+💬 پاسخگویی: در سریع‌ترین زمان ممکن
 </div>
+
+<p style="margin-top:20px;">
+ما همیشه از پیشنهادات و انتقادات شما استقبال می‌کنیم.
+</p>
+</div>
+
+</div>
+
+<footer>
+© 2026 Radjal Group - All Rights Reserved
+</footer>
 
 </body>
 </html>
