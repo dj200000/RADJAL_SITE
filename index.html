@@ -3,102 +3,163 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>RADJAL NEWS</title>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
-
 body{
     margin:0;
-    font-family:'Poppins',sans-serif;
-    background:linear-gradient(135deg,#0f172a,#1e293b,#2563eb);
-    color:white;
-    text-align:center;
+    font-family:tahoma,sans-serif;
+    background:#f4f4f4;
 }
 
 header{
-    padding:40px 20px;
+    background:#0f172a;
+    color:white;
+    padding:15px;
 }
 
-h1{
-    font-size:60px;
-    margin-bottom:10px;
+.logo{
+    font-size:32px;
+    font-weight:bold;
 }
 
-.subtitle{
-    font-size:22px;
-    opacity:0.9;
+nav{
+    margin-top:10px;
 }
 
-.news{
-    max-width:900px;
-    margin:30px auto;
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 10px;
+    font-weight:bold;
+}
+
+.breaking{
+    background:red;
+    color:white;
+    padding:10px;
+    font-weight:bold;
+}
+
+.hero{
+    background:white;
+    margin:20px;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+}
+
+.news-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:20px;
     padding:20px;
 }
 
 .card{
-    background:rgba(255,255,255,0.1);
+    background:white;
     padding:20px;
-    margin-bottom:20px;
-    border-radius:15px;
-    text-align:right;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
 }
 
-.card h2{
+.card h3{
     margin-top:0;
-}
-
-.card p{
-    line-height:1.8;
+    color:#2563eb;
 }
 
 footer{
-    margin-top:40px;
+    background:#0f172a;
+    color:white;
+    text-align:center;
     padding:20px;
-    opacity:0.8;
+    margin-top:30px;
 }
 </style>
-
 </head>
 
 <body>
 
 <header>
-    <h1>RADJAL NEWS</h1>
-    <p class="subtitle">
-        آخرین اخبار فناوری، هوش مصنوعی، بازی و اینترنت
-    </p>
+<div class="logo">RADJAL NEWS</div>
+
+<nav>
+<a href="#">خانه</a>
+<a href="#">فناوری</a>
+<a href="#">هوش مصنوعی</a>
+<a href="#">بازی‌ها</a>
+<a href="#">تماس با ما</a>
+</nav>
 </header>
 
-<div class="news">
+<div class="breaking">
+🚨 خبر فوری: پیش‌فروش GTA VI آغاز شده است.
+</div>
 
-    <div class="card">
-        <h2>راه‌اندازی سایت خبری RADJAL</h2>
-        <p>
-            سایت خبری RADJAL به صورت رسمی راه‌اندازی شد.
-            در آینده اخبار فناوری، برنامه‌نویسی، هوش مصنوعی و بازی‌های ویدیویی در این وب‌سایت منتشر خواهد شد.
-        </p>
-    </div>
+<div class="container">
 
-    <div class="card">
-        <h2>اخبار فناوری</h2>
-        <p>
-            جدیدترین اخبار دنیای تکنولوژی، شرکت‌های بزرگ فناوری و پروژه‌های نوآورانه در این بخش قرار می‌گیرد.
-        </p>
-    </div>
+<div class="hero">
+<h1>به RADJAL NEWS خوش آمدید</h1>
+<p>
+پوشش اخبار فناوری، هوش مصنوعی، اینترنت و بازی‌های ویدیویی.
+</p>
+</div>
 
-    <div class="card">
-        <h2>اخبار بازی‌ها</h2>
-        <p>
-            اخبار مربوط به ماینکرفت، فناف، روبلاکس و سایر بازی‌های محبوب در این قسمت منتشر می‌شود.
-        </p>
-    </div>
+<div class="news-grid">
+
+<div class="card">
+<h3>هوش مصنوعی و امنیت سایبری</h3>
+<p>
+ائتلاف Five Eyes هشدار داده مدل‌های پیشرفته هوش مصنوعی ممکن است در ماه‌های آینده حملات سایبری بسیار پیچیده‌تری ایجاد کنند.
+</p>
+</div>
+
+<div class="card">
+<h3>OpenAI و تراشه اختصاصی</h3>
+<p>
+گزارش‌های جدید از توسعه تراشه اختصاصی هوش مصنوعی توسط OpenAI با همکاری Broadcom خبر می‌دهند.
+</p>
+</div>
+
+<div class="card">
+<h3>GTA VI</h3>
+<p>
+راک‌استار تاریخ آغاز پیش‌فروش GTA VI را اعلام کرده و هیجان طرفداران به اوج رسیده است.
+</p>
+</div>
+
+<div class="card">
+<h3>Xbox در 25 سالگی</h3>
+<p>
+ایکس‌باکس برنامه‌های جدیدی برای بازی‌ها، سرویس‌ها و اقتباس‌های سینمایی معرفی کرده است.
+</p>
+</div>
+
+<div class="card">
+<h3>اخبار سایت</h3>
+<p>
+سایت خبری RADJAL به صورت آزمایشی راه‌اندازی شد و امکانات بیشتری به زودی اضافه خواهد شد.
+</p>
+</div>
+
+<div class="card">
+<h3>بخش بازی‌ها</h3>
+<p>
+اخبار ماینکرفت، فناف، روبلاکس و دیگر بازی‌های محبوب به زودی منتشر می‌شود.
+</p>
+</div>
+
+</div>
 
 </div>
 
 <footer>
-    © 2026 Radjal Group - All Rights Reserved
+© 2026 Radjal Group - All Rights Reserved
 </footer>
 
 </body>
