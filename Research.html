@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PaperVault | کتابخانه مقالات</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap');
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:'Vazirmatn',sans-serif;
+    background:#080b16;
+    color:#fff;
+    min-height:100vh;
+}
+
+/* HEADER */
+
+header{
+    padding:55px 8% 35px;
+    background:
+        radial-gradient(circle at 20% 20%,#4327a855,transparent 35%),
+        radial-gradient(circle at 80% 10%,#00c6ff33,transparent 35%);
+}
+
+.logo{
+    font-size:30px;
+    font-weight:800;
+}
+
+.logo span{
+    color:#7c5cff;
+}
+
+.hero{
+    margin-top:55px;
+    max-width:850px;
+}
+
+.hero h1{
+    font-size:clamp(38px,6vw,70px);
+    line-height:1.15;
+    background:linear-gradient(90deg,#fff,#9e9cff,#54d8ff);
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+.hero p{
+    margin-top:20px;
+    color:#a8aec4;
+    font-size:17px;
+    line-height:2;
+}
+
+/* SEARCH */
+
+.search{
+    margin-top:30px;
+    display:flex;
+    max-width:650px;
+}
+
+.search input{
+    flex:1;
+    padding:17px 20px;
+    border-radius:14px 0 0 14px;
+    border:none;
+    outline:none;
+    background:#151a2d;
+    color:white;
+    font-family:inherit;
+}
+
+.search button{
+    padding:0 25px;
+    border:none;
+    border-radius:0 14px 14px 0;
+    background:#7157ff;
+    color:white;
+    font-family:inherit;
+    cursor:pointer;
+}
+
+/* CATEGORIES */
+
+.categories{
+    padding:25px 8%;
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+.category{
+    border:1px solid #252b45;
+    background:#11162a;
+    color:#bfc5dc;
+    padding:9px 18px;
+    border-radius:30px;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.category:hover,
+.category.active{
+    background:#7157ff;
+    color:white;
+}
+
+/* PAPERS */
+
+.container{
+    padding:25px 8% 80px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:22px;
+}
+
+.card{
+    background:linear-gradient(145deg,#12172a,#0e1220);
+    border:1px solid #252b45;
+    border-radius:22px;
+    padding:25px;
+    transition:.3s;
+    position:relative;
+    overflow:hidden;
+}
+
+.card:hover{
+    transform:translateY(-7px);
+    border-color:#7157ff;
+    box-shadow:0 15px 45px #0008;
+}
+
+.badge{
+    display:inline-block;
+    padding:6px 12px;
+    border-radius:20px;
+    background:#7157ff22;
+    color:#9c8cff;
+    font-size:12px;
+}
+
+.card h2{
+    margin-top:18px;
+    font-size:20px;
+    line-height:1.6;
+}
+
+.author{
+    color:#747c98;
+    font-size:13px;
+    margin-top:8px;
+}
+
+.description{
+    color:#aab0c3;
+    line-height:1.9;
+    font-size:14px;
+    margin:15px 0 22px;
+}
+
+.pdf{
+    display:block;
+    text-align:center;
+    text-decoration:none;
+    background:linear-gradient(90deg,#7157ff,#4c9dff);
+    color:white;
+    padding:12px;
+    border-radius:12px;
+    font-weight:600;
+    transition:.2s;
+}
+
+.pdf:hover{
+    transform:scale(1.02);
+}
+
+/* FOOTER */
+
+footer{
+    border-top:1px solid #20263d;
+    text-align:center;
+    padding:30px;
+    color:#686f88;
+    font-size:13px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        Paper<span>Vault</span> 📚
+    </div>
+
+    <div class="hero">
+        <h1>مقاله‌های بزرگ<br>دنیای علم</h1>
+
+        <p>
+            مجموعه‌ای از مقالات معروف و تأثیرگذار در حوزه‌های
+            هوش مصنوعی، کامپیوتر، فیزیک و ریاضیات.
+        </p>
+
+        <div class="search">
+            <input
+                id="search"
+                type="text"
+                placeholder="جستجوی مقاله..."
+                oninput="searchPapers()"
+            >
+            <button>جستجو</button>
+        </div>
+    </div>
+
+</header>
+
+<div class="categories">
+
+    <div class="category active" onclick="filterPapers('all',this)">
+        همه
+    </div>
+
+    <div class="category" onclick="filterPapers('ai',this)">
+        🤖 هوش مصنوعی
+    </div>
+
+    <div class="category" onclick="filterPapers('computer',this)">
+        💻 علوم کامپیوتر
+    </div>
+
+    <div class="category" onclick="filterPapers('math',this)">
+        📐 ریاضیات
+    </div>
+
+    <div class="category" onclick="filterPapers('physics',this)">
+        ⚛️ فیزیک
+    </div>
+
+</div>
+
+<main class="container">
+
+<div class="grid" id="papers">
+
+<!-- PAPER 1 -->
+
+<div class="card" data-category="ai">
+
+<span class="badge">🤖 هوش مصنوعی</span>
+
+<h2>
+Attention Is All You Need
+</h2>
+
+<div class="author">
+Ashish Vaswani et al. — 2017
+</div>
+
+<p class="description">
+مقاله معروفی که معماری Transformer را معرفی کرد؛
+پایه‌ای برای بسیاری از مدل‌های زبانی مدرن.
+</p>
+
+<a
+class="pdf"
+href="https://arxiv.org/pdf/1706.03762"
+target="_blank">
+📄 مشاهده PDF
+</a>
+
+</div>
+
+
+<!-- PAPER 2 -->
+
+<div class="card" data-category="ai">
+
+<span class="badge">🤖 هوش مصنوعی</span>
+
+<h2>
+Generative Adversarial Nets
+</h2>
+
+<div class="author">
+Ian Goodfellow et al. — 2014
+</div>
+
+<p class="description">
+مقاله‌ای بنیادی درباره GANها که روش جدیدی
+برای تولید داده‌های مصنوعی با شبکه‌های عصبی ارائه کرد.
+</p>
+
+<a
+class="pdf"
+href="https://arxiv.org/pdf/1406.2661"
+target="_blank">
+📄 مشاهده PDF
+</a>
+
+</div>
+
+
+<!-- PAPER 3 -->
+
+<div class="card" data-category="ai">
+
+<span class="badge">🤖 هوش مصنوعی</span>
+
+<h2>
+Deep Residual Learning for Image Recognition
+</h2>
+
+<div class="author">
+Kaiming He et al. — 2015
+</div>
+
+<p class="description">
+مقاله معروف ResNet که با معرفی
+Residual Learning آموزش شبکه‌های عمیق را آسان‌تر کرد.
+</p>
+
+<a
+class="pdf"
+href="https://arxiv.org/pdf/1512.03385"
+target="_blank">
+📄 مشاهده PDF
+</a>
+
+</div>
+
+
+<!-- PAPER 4 -->
+
+<div class="card" data-category="computer">
+
+<span class="badge">💻 علوم کامپیوتر</span>
+
+<h2>
+MapReduce: Simplified Data Processing
+</h2>
+
+<div class="author">
+Jeffrey Dean & Sanjay Ghemawat — 2004
+</div>
+
+<p class="description">
+یک مدل مهم برای پردازش حجم بسیار زیاد داده
+در سیستم‌های توزیع‌شده.
+</p>
+
+<a
+class="pdf"
+href="https://research.google.com/archive/mapreduce-osdi04.pdf"
+target="_blank">
+📄 مشاهده PDF
+</a>
+
+</div>
+
+
+<!-- PAPER 5 -->
+
+<div class="card" data-category="ai">
+
+<span class="badge">🤖 هوش مصنوعی</span>
+
+<h2>
+BERT: Pre-training of Deep Bidirectional Transformers
+</h2>
+
+<div class="author">
+Jacob Devlin et al. — 2018
+</div>
+
+<p class="description">
+یکی از مقالات مهم NLP که روش
+پیش‌آموزش دوطرفه Transformer را معرفی کرد.
+</p>
+
+<a
+class="pdf"
+href="https://arxiv.org/pdf/1810.04805"
+target="_blank">
+📄 مشاهده PDF
+</a>
+
+</div>
+
+
+<!-- PAPER 6 -->
+
+<div class="card" data-category="math">
+
+<span class="badge">📐 ریاضیات</span>
+
+<h2>
+A Mathematical Theory of Communication
+</h2>
+
+<div class="author">
+Claude Shannon — 1948
+</div>
+
+<p class="description">
+مقاله تاریخی کلود شنون که پایه‌های نظریه اطلاعات
+و بسیاری از مفاهیم ارتباطات دیجیتال را بنا کرد.
+</p>
+
+<a
+class="pdf"
+href="https://people.math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf"
+target="_blank">
+📄 مشاهده PDF
+</a>
+
+</div>
+
+
+<!-- PAPER 7 -->
+
+<div class="card" data-category="ai">
+
+<span class="badge">🤖 هوش مصنوعی</span>
+
+<h2>
+Adam: A Method for Stochastic Optimization
+</h2>
+
+<div class="author">
+Diederik Kingma & Jimmy Ba — 2014
+</div>
+
+<p class="description">
+معرفی الگوریتم Adam؛ یکی از محبوب‌ترین
+روش‌های بهینه‌سازی در یادگیری عمیق.
+</p>
+
+<a
+class="pdf"
+href="https://arxiv.org/pdf/1412.6980"
+target="_blank">
+📄 مشاهده PDF
+</a>
+
+</div>
+
+
+<!-- PAPER 8 -->
+
+<div class="card" data-category="ai">
+
+<span class="badge">🤖 هوش مصنوعی</span>
+
+<h2>
+ImageNet Classification with Deep CNNs
+</h2>
+
+<div class="author">
+Alex Krizhevsky et al. — 2012
+</div>
+
+<p class="description">
+مقاله معروف AlexNet که نقطه عطفی در
+رشد شبکه‌های عصبی کانولوشنی و Computer Vision بود.
+</p>
+
+<a
+class="pdf"
+href="https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf"
+target="_blank">
+📄 مشاهده PDF
+</a>
+
+</div>
+
+</div>
+
+</main>
+
+<footer>
+PaperVault © 2026 — Scientific Papers Library
+</footer>
+
+
+<script>
+
+function filterPapers(category,element){
+
+    document.querySelectorAll('.category')
+    .forEach(x=>x.classList.remove('active'));
+
+    element.classList.add('active');
+
+    document.querySelectorAll('.card')
+    .forEach(card=>{
+
+        if(category==='all' ||
+           card.dataset.category===category){
+
+            card.style.display='block';
+
+        }else{
+
+            card.style.display='none';
+
+        }
+
+    });
+
+}
+
+
+function searchPapers(){
+
+    let query =
+        document.getElementById('search')
+        .value
+        .toLowerCase();
+
+    document.querySelectorAll('.card')
+    .forEach(card=>{
+
+        let text=card.innerText.toLowerCase();
+
+        card.style.display =
+            text.includes(query)
+            ? 'block'
+            : 'none';
+
+    });
+
+}
+
+</script>
+
+</body>
+</html>
