@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-<meta name="description" content="PaperVault؛ کتابخانه‌ای از مقالات علمی معروف جهان با لینک مستقیم PDF، دسته‌بندی‌شده در حوزه‌های هوش مصنوعی، علوم کامپیوتر، ریاضیات و فیزیک.">    
+
+<meta name="description" content="PaperVault؛ کتابخانه‌ای از مقالات علمی معروف جهان با لینک مستقیم PDF، دسته‌بندی‌شده در حوزه‌های هوش مصنوعی، علوم کامپیوتر، ریاضیات و فیزیک.">
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -22,8 +24,6 @@ body{
     color:#fff;
     min-height:100vh;
 }
-
-/* HEADER */
 
 header{
     padding:55px 8% 35px;
@@ -61,8 +61,6 @@ header{
     line-height:2;
 }
 
-/* SEARCH */
-
 .search{
     margin-top:30px;
     display:flex;
@@ -90,8 +88,6 @@ header{
     cursor:pointer;
 }
 
-/* CATEGORIES */
-
 .categories{
     padding:25px 8%;
     display:flex;
@@ -106,6 +102,859 @@ header{
     padding:9px 18px;
     border-radius:30px;
     cursor:pointer;
+    transition:.2s;
+}
+
+.category:hover,
+.category.active{
+    background:#7157ff;
+    color:white;
+}
+
+.container{
+    padding:25px 8% 80px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:22px;
+}
+
+.card{
+    background:linear-gradient(145deg,#12172a,#0e1220);
+    border:1px solid #252b45;
+    border-radius:22px;
+    padding:25px;
+    transition:.3s;
+    position:relative;
+    overflow:hidden;
+}
+
+.card:hover{
+    transform:translateY(-7px);
+    border-color:#7157ff;
+    box-shadow:0 15px 45px #0008;
+}
+
+.badge{
+    display:inline-block;
+    padding:6px 12px;
+    border-radius:20px;
+    background:#7157ff22;
+    color:#9c8cff;
+    font-size:12px;
+}
+
+.card h2{
+    margin-top:18px;
+    font-size:20px;
+    line-height:1.6;
+}
+
+.author{
+    color:#747c98;
+    font-size:13px;
+    margin-top:8px;
+}
+
+.description{
+    color:#aab0c3;
+    line-height:1.9;
+    font-size:14px;
+    margin:15px 0 22px;
+}
+
+.buttons{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.pdf,
+.summary-btn{
+    display:block;
+    width:100%;
+    text-align:center;
+    text-decoration:none;
+    border:none;
+    color:white;
+    padding:12px;
+    border-radius:12px;
+    font-family:inherit;
+    font-weight:600;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.pdf{
+    background:linear-gradient(90deg,#7157ff,#4c9dff);
+}
+
+.summary-btn{
+    background:#171d33;
+    border:1px solid #303957;
+}
+
+.pdf:hover,
+.summary-btn:hover{
+    transform:scale(1.02);
+}
+
+.summary{
+    display:none;
+    margin-top:15px;
+    padding:16px;
+    background:#0a0f20;
+    border:1px solid #303957;
+    border-radius:14px;
+    color:#c8cee0;
+    line-height:2;
+    font-size:14px;
+}
+
+.summary.show{
+    display:block;
+}
+
+footer{
+    border-top:1px solid #20263d;
+    text-align:center;
+    padding:30px;
+    color:#686f88;
+    font-size:13px;
+}
+
+/* PASSWORD MODAL */
+
+.modal{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:#000b;
+    backdrop-filter:blur(8px);
+    z-index:9999;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+}
+
+.modal.show{
+    display:flex;
+}
+
+.modal-box{
+    width:100%;
+    max-width:400px;
+    background:linear-gradient(145deg,#151b30,#0d1222);
+    border:1px solid #343d61;
+    border-radius:22px;
+    padding:30px;
+    text-align:center;
+    box-shadow:0 20px 70px #000b;
+}
+
+.modal-box h3{
+    font-size:22px;
+    margin-bottom:10px;
+}
+
+.modal-box p{
+    color:#8e96b0;
+    font-size:13px;
+    margin-bottom:20px;
+}
+
+.password-input{
+    width:100%;
+    padding:14px;
+    border-radius:12px;
+    border:1px solid #303957;
+    background:#090e1c;
+    color:white;
+    outline:none;
+    font-family:inherit;
+    text-align:center;
+    margin-bottom:12px;
+}
+
+.password-input:focus{
+    border-color:#7157ff;
+}
+
+.unlock{
+    width:100%;
+    padding:13px;
+    border:none;
+    border-radius:12px;
+    background:linear-gradient(90deg,#7157ff,#4c9dff);
+    color:white;
+    font-family:inherit;
+    font-weight:700;
+    cursor:pointer;
+}
+
+.cancel{
+    margin-top:10px;
+    width:100%;
+    padding:11px;
+    border:none;
+    background:transparent;
+    color:#858da8;
+    font-family:inherit;
+    cursor:pointer;
+}
+
+.error{
+    color:#ff6b8a;
+    font-size:13px;
+    margin-top:12px;
+    display:none;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        Paper<span>Vault</span> 📚
+    </div>
+
+    <div class="hero">
+
+        <h1>مقاله‌های بزرگ<br>دنیای علم</h1>
+
+        <p>
+            مجموعه‌ای از مقالات معروف و تأثیرگذار در حوزه‌های
+            هوش مصنوعی، کامپیوتر، فیزیک و ریاضیات.
+        </p>
+
+        <div class="search">
+
+            <input
+                id="search"
+                type="text"
+                placeholder="جستجوی مقاله..."
+                oninput="searchPapers()"
+            >
+
+            <button>جستجو</button>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<div class="categories">
+
+    <div class="category active" onclick="filterPapers('all',this)">
+        همه
+    </div>
+
+    <div class="category" onclick="filterPapers('ai',this)">
+        🤖 هوش مصنوعی
+    </div>
+
+    <div class="category" onclick="filterPapers('computer',this)">
+        💻 علوم کامپیوتر
+    </div>
+
+    <div class="category" onclick="filterPapers('math',this)">
+        📐 ریاضیات
+    </div>
+
+    <div class="category" onclick="filterPapers('physics',this)">
+        ⚛️ فیزیک
+    </div>
+
+</div>
+
+
+<main class="container">
+
+<div class="grid" id="papers">
+
+
+<!-- PAPER 1 -->
+
+<div class="card" data-category="ai">
+
+<span class="badge">🤖 هوش مصنوعی</span>
+
+<h2>Attention Is All You Need</h2>
+
+<div class="author">
+Ashish Vaswani et al. — 2017
+</div>
+
+<p class="description">
+مقاله معروفی که معماری Transformer را معرفی کرد؛
+پایه‌ای برای بسیاری از مدل‌های زبانی مدرن.
+</p>
+
+<div class="buttons">
+
+<a
+class="pdf"
+href="https://arxiv.org/pdf/1706.03762"
+target="_blank"
+rel="noopener noreferrer">
+📄 مشاهده PDF
+</a>
+
+<button class="summary-btn" onclick="requestSummary('transformer')">
+🔐 مشاهده خلاصه
+</button>
+
+</div>
+
+<div class="summary" id="summary-transformer">
+این مقاله معماری Transformer را معرفی می‌کند؛ معماری‌ای که به‌جای تکیه اصلی بر پردازش ترتیبی، از مکانیزم Attention برای بررسی ارتباط بین بخش‌های مختلف داده استفاده می‌کند. این ایده باعث شد پردازش متن سریع‌تر و امکان آموزش مدل‌های بسیار بزرگ‌تر فراهم شود و بعدها پایه بسیاری از مدل‌های زبانی مدرن شد.
+</div>
+
+</div>
+
+
+<!-- PAPER 2 -->
+
+<div class="card" data-category="ai">
+
+<span class="badge">🤖 هوش مصنوعی</span>
+
+<h2>Generative Adversarial Nets</h2>
+
+<div class="author">
+Ian Goodfellow et al. — 2014
+</div>
+
+<p class="description">
+مقاله‌ای بنیادی درباره GANها که روش جدیدی
+برای تولید داده‌های مصنوعی با شبکه‌های عصبی ارائه کرد.
+</p>
+
+<div class="buttons">
+
+<a
+class="pdf"
+href="https://arxiv.org/pdf/1406.2661"
+target="_blank"
+rel="noopener noreferrer">
+📄 مشاهده PDF
+</a>
+
+<button class="summary-btn" onclick="requestSummary('gan')">
+🔐 مشاهده خلاصه
+</button>
+
+</div>
+
+<div class="summary" id="summary-gan">
+GAN از دو شبکه عصبی تشکیل می‌شود: Generator که تلاش می‌کند داده‌های مصنوعی تولید کند و Discriminator که تلاش می‌کند داده واقعی را از داده جعلی تشخیص دهد. این دو شبکه با رقابت با یکدیگر آموزش می‌بینند و در نتیجه Generator به‌مرور می‌تواند نمونه‌های بسیار واقع‌گرایانه تولید کند.
+</div>
+
+</div>
+
+
+<!-- PAPER 3 -->
+
+<div class="card" data-category="ai">
+
+<span class="badge">🤖 هوش مصنوعی</span>
+
+<h2>Deep Residual Learning for Image Recognition</h2>
+
+<div class="author">
+Kaiming He et al. — 2015
+</div>
+
+<p class="description">
+مقاله معروف ResNet که با معرفی
+Residual Learning آموزش شبکه‌های عمیق را آسان‌تر کرد.
+</p>
+
+<div class="buttons">
+
+<a
+class="pdf"
+href="https://arxiv.org/pdf/1512.03385"
+target="_blank"
+rel="noopener noreferrer">
+📄 مشاهده PDF
+</a>
+
+<button class="summary-btn" onclick="requestSummary('resnet')">
+🔐 مشاهده خلاصه
+</button>
+
+</div>
+
+<div class="summary" id="summary-resnet">
+این مقاله معماری ResNet را معرفی می‌کند. ایده اصلی استفاده از اتصال‌های میان‌بُر یا Skip Connection است تا شبکه بتواند بخشی از اطلاعات ورودی را مستقیماً به لایه‌های بعدی منتقل کند. این روش مشکل دشوار شدن آموزش شبکه‌های بسیار عمیق را کاهش داد و تأثیر بزرگی بر بینایی ماشین گذاشت.
+</div>
+
+</div>
+
+
+<!-- PAPER 4 -->
+
+<div class="card" data-category="computer">
+
+<span class="badge">💻 علوم کامپیوتر</span>
+
+<h2>MapReduce: Simplified Data Processing</h2>
+
+<div class="author">
+Jeffrey Dean & Sanjay Ghemawat — 2004
+</div>
+
+<p class="description">
+یک مدل مهم برای پردازش حجم بسیار زیاد داده
+در سیستم‌های توزیع‌شده.
+</p>
+
+<div class="buttons">
+
+<a
+class="pdf"
+href="https://research.google.com/archive/mapreduce-osdi04.pdf"
+target="_blank"
+rel="noopener noreferrer">
+📄 مشاهده PDF
+</a>
+
+<button class="summary-btn" onclick="requestSummary('mapreduce')">
+🔐 مشاهده خلاصه
+</button>
+
+</div>
+
+<div class="summary" id="summary-mapreduce">
+MapReduce روشی برای پردازش حجم عظیم داده روی تعداد زیادی کامپیوتر است. برنامه به دو مرحله اصلی تقسیم می‌شود: Map برای پردازش و تبدیل داده‌ها و Reduce برای ترکیب نتایج. این مدل انجام پردازش‌های بزرگ و توزیع‌شده را ساده‌تر کرد و در شکل‌گیری سیستم‌های پردازش داده مقیاس‌پذیر نقش مهمی داشت.
+</div>
+
+</div>
+
+
+<!-- PAPER 5 -->
+
+<div class="card" data-category="ai">
+
+<span class="badge">🤖 هوش مصنوعی</span>
+
+<h2>BERT: Pre-training of Deep Bidirectional Transformers</h2>
+
+<div class="author">
+Jacob Devlin et al. — 2018
+</div>
+
+<p class="description">
+یکی از مقالات مهم NLP که روش
+پیش‌آموزش دوطرفه Transformer را معرفی کرد.
+</p>
+
+<div class="buttons">
+
+<a
+class="pdf"
+href="https://arxiv.org/pdf/1810.04805"
+target="_blank"
+rel="noopener noreferrer">
+📄 مشاهده PDF
+</a>
+
+<button class="summary-btn" onclick="requestSummary('bert')">
+🔐 مشاهده خلاصه
+</button>
+
+</div>
+
+<div class="summary" id="summary-bert">
+BERT روشی برای پیش‌آموزش مدل‌های زبانی است که متن را به‌صورت دوطرفه بررسی می‌کند؛ یعنی هنگام یادگیری، اطلاعات قبل و بعد از یک کلمه را در نظر می‌گیرد. مدل پس از پیش‌آموزش می‌تواند برای کارهایی مانند پاسخ‌گویی، طبقه‌بندی متن و درک زبان استفاده شود و تأثیر زیادی بر NLP گذاشت.
+</div>
+
+</div>
+
+
+<!-- PAPER 6 -->
+
+<div class="card" data-category="math">
+
+<span class="badge">📐 ریاضیات</span>
+
+<h2>A Mathematical Theory of Communication</h2>
+
+<div class="author">
+Claude Shannon — 1948
+</div>
+
+<p class="description">
+مقاله تاریخی کلود شنون که پایه‌های نظریه اطلاعات
+و بسیاری از مفاهیم ارتباطات دیجیتال را بنا کرد.
+</p>
+
+<div class="buttons">
+
+<a
+class="pdf"
+href="https://people.math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf"
+target="_blank"
+rel="noopener noreferrer">
+📄 مشاهده PDF
+</a>
+
+<button class="summary-btn" onclick="requestSummary('shannon')">
+🔐 مشاهده خلاصه
+</button>
+
+</div>
+
+<div class="summary" id="summary-shannon">
+کلود شنون در این مقاله پایه‌های نظریه اطلاعات را مطرح کرد. یکی از مفاهیم مهم آن Entropy یا آنتروپی است که میزان عدم‌قطعیت یک منبع اطلاعاتی را اندازه‌گیری می‌کند. این نظریه بعدها در فشرده‌سازی داده، ارتباطات دیجیتال، رمزنگاری و بسیاری از حوزه‌های فناوری مورد استفاده قرار گرفت.
+</div>
+
+</div>
+
+
+<!-- PAPER 7 -->
+
+<div class="card" data-category="ai">
+
+<span class="badge">🤖 هوش مصنوعی</span>
+
+<h2>Adam: A Method for Stochastic Optimization</h2>
+
+<div class="author">
+Diederik Kingma & Jimmy Ba — 2014
+</div>
+
+<p class="description">
+معرفی الگوریتم Adam؛ یکی از محبوب‌ترین
+روش‌های بهینه‌سازی در یادگیری عمیق.
+</p>
+
+<div class="buttons">
+
+<a
+class="pdf"
+href="https://arxiv.org/pdf/1412.6980"
+target="_blank"
+rel="noopener noreferrer">
+📄 مشاهده PDF
+</a>
+
+<button class="summary-btn" onclick="requestSummary('adam')">
+🔐 مشاهده خلاصه
+</button>
+
+</div>
+
+<div class="summary" id="summary-adam">
+Adam یک الگوریتم بهینه‌سازی برای آموزش شبکه‌های عصبی است که ایده‌هایی از روش‌های Momentum و Adaptive Learning Rate را ترکیب می‌کند. Adam برای هر پارامتر نرخ یادگیری مناسب‌تری در نظر می‌گیرد و به همین دلیل در بسیاری از پروژه‌های یادگیری عمیق به‌عنوان یک انتخاب مناسب برای آموزش مدل استفاده شده است.
+</div>
+
+</div>
+
+
+<!-- PAPER 8 -->
+
+<div class="card" data-category="ai">
+
+<span class="badge">🤖 هوش مصنوعی</span>
+
+<h2>ImageNet Classification with Deep CNNs</h2>
+
+<div class="author">
+Alex Krizhevsky et al. — 2012
+</div>
+
+<p class="description">
+مقاله معروف AlexNet که نقطه عطفی در
+رشد شبکه‌های عصبی کانولوشنی و Computer Vision بود.
+</p>
+
+<div class="buttons">
+
+<a
+class="pdf"
+href="https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf"
+target="_blank"
+rel="noopener noreferrer">
+📄 مشاهده PDF
+</a>
+
+<button class="summary-btn" onclick="requestSummary('alexnet')">
+🔐 مشاهده خلاصه
+</button>
+
+</div>
+
+<div class="summary" id="summary-alexnet">
+AlexNet یک شبکه عصبی کانولوشنی عمیق بود که در مسابقه ImageNet عملکرد بسیار قدرتمندی نشان داد. استفاده از CNN عمیق، GPU و روش‌هایی مانند ReLU و Dropout باعث شد این مدل در تشخیص تصاویر بسیار موفق شود و موج جدیدی از تحقیقات در حوزه Deep Learning و Computer Vision شکل بگیرد.
+</div>
+
+</div>
+
+
+</div>
+
+</main>
+
+
+<footer>
+© 2026 Radjal Group - All Rights Reserved
+</footer>
+
+
+<!-- PASSWORD MODAL -->
+
+<div class="modal" id="passwordModal">
+
+<div class="modal-box">
+
+<h3>🔐 خلاصه اختصاصی</h3>
+
+<p>
+برای مشاهده خلاصه این مقاله رمز را وارد کنید.
+</p>
+
+<input
+id="passwordInput"
+class="password-input"
+type="password"
+placeholder="رمز عبور"
+onkeydown="if(event.key==='Enter') checkPassword()"
+>
+
+<button class="unlock" onclick="checkPassword()">
+باز کردن خلاصه
+</button>
+
+<button class="cancel" onclick="closeModal()">
+انصراف
+</button>
+
+<div class="error" id="passwordError">
+❌ رمز اشتباه است.
+</div>
+
+</div>
+
+</div>
+
+
+<script>
+
+/* =========================
+   PASSWORD SECURITY
+========================= */
+
+/*
+   SHA-256 رمز عبور.
+   رمز واقعی داخل کد نوشته نشده است.
+   
+   رمز فعلی:
+   RADMAN2026
+*/
+
+const PASSWORD_HASH =
+"bd45d791d8c474bfb8b4bbce112b628631a223fe53d75e7eac4c89d7bb9adbdf";
+
+let selectedSummary = null;
+
+
+/* درخواست مشاهده خلاصه */
+
+function requestSummary(id){
+
+    selectedSummary = id;
+
+    document
+        .getElementById("passwordModal")
+        .classList.add("show");
+
+    document
+        .getElementById("passwordInput")
+        .value = "";
+
+    document
+        .getElementById("passwordError")
+        .style.display = "none";
+
+    setTimeout(()=>{
+        document
+            .getElementById("passwordInput")
+            .focus();
+    },100);
+
+}
+
+
+/* تبدیل رمز واردشده به SHA-256 */
+
+async function hashPassword(password){
+
+    const data =
+        new TextEncoder().encode(password);
+
+    const hashBuffer =
+        await crypto.subtle.digest(
+            "SHA-256",
+            data
+        );
+
+    const hashArray =
+        Array.from(
+            new Uint8Array(hashBuffer)
+        );
+
+    return hashArray
+        .map(
+            b => b
+            .toString(16)
+            .padStart(2,"0")
+        )
+        .join("");
+
+}
+
+
+/* بررسی رمز */
+
+async function checkPassword(){
+
+    const input =
+        document
+        .getElementById("passwordInput")
+        .value;
+
+    const hash =
+        await hashPassword(input);
+
+    if(hash === PASSWORD_HASH){
+
+        closeModal();
+
+        const summary =
+            document
+            .getElementById(
+                "summary-" + selectedSummary
+            );
+
+        summary.classList.add("show");
+
+        summary.scrollIntoView({
+            behavior:"smooth",
+            block:"center"
+        });
+
+    }else{
+
+        document
+            .getElementById("passwordError")
+            .style.display = "block";
+
+    }
+
+}
+
+
+/* بستن پنجره */
+
+function closeModal(){
+
+    document
+        .getElementById("passwordModal")
+        .classList.remove("show");
+
+}
+
+
+/* بستن با کلیک بیرون */
+
+document
+.getElementById("passwordModal")
+.addEventListener("click",function(e){
+
+    if(e.target === this){
+        closeModal();
+    }
+
+});
+
+
+/* =========================
+   CATEGORY FILTER
+========================= */
+
+function filterPapers(category,element){
+
+    document
+        .querySelectorAll('.category')
+        .forEach(x =>
+            x.classList.remove('active')
+        );
+
+    element.classList.add('active');
+
+    document
+        .querySelectorAll('.card')
+        .forEach(card => {
+
+            if(
+                category === 'all' ||
+                card.dataset.category === category
+            ){
+
+                card.style.display = 'block';
+
+            }else{
+
+                card.style.display = 'none';
+
+            }
+
+        });
+
+}
+
+
+/* =========================
+   SEARCH
+========================= */
+
+function searchPapers(){
+
+    let query =
+        document
+        .getElementById('search')
+        .value
+        .toLowerCase();
+
+    document
+        .querySelectorAll('.card')
+        .forEach(card => {
+
+            let text =
+                card.innerText.toLowerCase();
+
+            card.style.display =
+                text.includes(query)
+                ? 'block'
+                : 'none';
+
+        });
+
+}
+
+</script>
+
+</body>
+</html>    cursor:pointer;
     transition:.2s;
 }
 
