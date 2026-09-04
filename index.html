@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-
 <meta name="description" content="PaperVault؛ کتابخانه‌ای از مقالات علمی معروف جهان با لینک مستقیم PDF، دسته‌بندی‌شده در حوزه‌های هوش مصنوعی، علوم کامپیوتر، ریاضیات و فیزیک.">
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -312,65 +310,67 @@ footer{
     display:none;
 }
 </style>
-
 </head>
 
 <body>
 
 <header>
 
-    <div class="logo">
-        Paper<span>Vault</span> 📚
-    </div>
+<div class="logo">
+Paper<span>Vault</span> 📚
+</div>
 
-    <div class="hero">
+<div class="hero">
 
-        <h1>مقاله‌های بزرگ<br>دنیای علم</h1>
+<h1>مقاله‌های بزرگ<br>دنیای علم</h1>
 
-        <p>
-            مجموعه‌ای از مقالات معروف و تأثیرگذار در حوزه‌های
-            هوش مصنوعی، کامپیوتر، فیزیک و ریاضیات.
-        </p>
+<p>
+مجموعه‌ای از مقالات معروف و تأثیرگذار در حوزه‌های
+هوش مصنوعی، کامپیوتر، فیزیک و ریاضیات.
+</p>
 
-        <div class="search">
+<div class="search">
 
-            <input
-                id="search"
-                type="text"
-                placeholder="جستجوی مقاله..."
-                oninput="searchPapers()"
-            >
+<input
+id="search"
+type="text"
+placeholder="جستجوی مقاله..."
+oninput="searchPapers()">
 
-            <button>جستجو</button>
+<button>جستجو</button>
 
-        </div>
-
-    </div>
+</div>
+</div>
 
 </header>
 
 
 <div class="categories">
 
-    <div class="category active" onclick="filterPapers('all',this)">
-        همه
-    </div>
+<div class="category active"
+onclick="filterPapers('all',this)">
+همه
+</div>
 
-    <div class="category" onclick="filterPapers('ai',this)">
-        🤖 هوش مصنوعی
-    </div>
+<div class="category"
+onclick="filterPapers('ai',this)">
+🤖 هوش مصنوعی
+</div>
 
-    <div class="category" onclick="filterPapers('computer',this)">
-        💻 علوم کامپیوتر
-    </div>
+<div class="category"
+onclick="filterPapers('computer',this)">
+💻 علوم کامپیوتر
+</div>
 
-    <div class="category" onclick="filterPapers('math',this)">
-        📐 ریاضیات
-    </div>
+<div class="category"
+onclick="filterPapers('math',this)">
+📐 ریاضیات
+</div>
 
-    <div class="category" onclick="filterPapers('physics',this)">
-        ⚛️ فیزیک
-    </div>
+<div class="category"
+onclick="filterPapers('physics',this)">
+⚛️ فیزیک
+</div>
 
 </div>
 
@@ -407,14 +407,12 @@ rel="noopener noreferrer">
 📄 مشاهده PDF
 </a>
 
-<button class="summary-btn" onclick="requestSummary('transformer')">
+<button
+class="summary-btn"
+onclick="requestSummary('transformer')">
 🔐 مشاهده خلاصه
 </button>
 
-</div>
-
-<div class="summary" id="summary-transformer">
-این مقاله معماری Transformer را معرفی می‌کند؛ معماری‌ای که به‌جای تکیه اصلی بر پردازش ترتیبی، از مکانیزم Attention برای بررسی ارتباط بین بخش‌های مختلف داده استفاده می‌کند. این ایده باعث شد پردازش متن سریع‌تر و امکان آموزش مدل‌های بسیار بزرگ‌تر فراهم شود و بعدها پایه بسیاری از مدل‌های زبانی مدرن شد.
 </div>
 
 </div>
@@ -447,14 +445,12 @@ rel="noopener noreferrer">
 📄 مشاهده PDF
 </a>
 
-<button class="summary-btn" onclick="requestSummary('gan')">
+<button
+class="summary-btn"
+onclick="requestSummary('gan')">
 🔐 مشاهده خلاصه
 </button>
 
-</div>
-
-<div class="summary" id="summary-gan">
-GAN از دو شبکه عصبی تشکیل می‌شود: Generator که تلاش می‌کند داده‌های مصنوعی تولید کند و Discriminator که تلاش می‌کند داده واقعی را از داده جعلی تشخیص دهد. این دو شبکه با رقابت با یکدیگر آموزش می‌بینند و در نتیجه Generator به‌مرور می‌تواند نمونه‌های بسیار واقع‌گرایانه تولید کند.
 </div>
 
 </div>
@@ -487,14 +483,12 @@ rel="noopener noreferrer">
 📄 مشاهده PDF
 </a>
 
-<button class="summary-btn" onclick="requestSummary('resnet')">
+<button
+class="summary-btn"
+onclick="requestSummary('resnet')">
 🔐 مشاهده خلاصه
 </button>
 
-</div>
-
-<div class="summary" id="summary-resnet">
-این مقاله معماری ResNet را معرفی می‌کند. ایده اصلی استفاده از اتصال‌های میان‌بُر یا Skip Connection است تا شبکه بتواند بخشی از اطلاعات ورودی را مستقیماً به لایه‌های بعدی منتقل کند. این روش مشکل دشوار شدن آموزش شبکه‌های بسیار عمیق را کاهش داد و تأثیر بزرگی بر بینایی ماشین گذاشت.
 </div>
 
 </div>
@@ -527,14 +521,12 @@ rel="noopener noreferrer">
 📄 مشاهده PDF
 </a>
 
-<button class="summary-btn" onclick="requestSummary('mapreduce')">
+<button
+class="summary-btn"
+onclick="requestSummary('mapreduce')">
 🔐 مشاهده خلاصه
 </button>
 
-</div>
-
-<div class="summary" id="summary-mapreduce">
-MapReduce روشی برای پردازش حجم عظیم داده روی تعداد زیادی کامپیوتر است. برنامه به دو مرحله اصلی تقسیم می‌شود: Map برای پردازش و تبدیل داده‌ها و Reduce برای ترکیب نتایج. این مدل انجام پردازش‌های بزرگ و توزیع‌شده را ساده‌تر کرد و در شکل‌گیری سیستم‌های پردازش داده مقیاس‌پذیر نقش مهمی داشت.
 </div>
 
 </div>
@@ -567,14 +559,12 @@ rel="noopener noreferrer">
 📄 مشاهده PDF
 </a>
 
-<button class="summary-btn" onclick="requestSummary('bert')">
+<button
+class="summary-btn"
+onclick="requestSummary('bert')">
 🔐 مشاهده خلاصه
 </button>
 
-</div>
-
-<div class="summary" id="summary-bert">
-BERT روشی برای پیش‌آموزش مدل‌های زبانی است که متن را به‌صورت دوطرفه بررسی می‌کند؛ یعنی هنگام یادگیری، اطلاعات قبل و بعد از یک کلمه را در نظر می‌گیرد. مدل پس از پیش‌آموزش می‌تواند برای کارهایی مانند پاسخ‌گویی، طبقه‌بندی متن و درک زبان استفاده شود و تأثیر زیادی بر NLP گذاشت.
 </div>
 
 </div>
@@ -607,14 +597,12 @@ rel="noopener noreferrer">
 📄 مشاهده PDF
 </a>
 
-<button class="summary-btn" onclick="requestSummary('shannon')">
+<button
+class="summary-btn"
+onclick="requestSummary('shannon')">
 🔐 مشاهده خلاصه
 </button>
 
-</div>
-
-<div class="summary" id="summary-shannon">
-کلود شنون در این مقاله پایه‌های نظریه اطلاعات را مطرح کرد. یکی از مفاهیم مهم آن Entropy یا آنتروپی است که میزان عدم‌قطعیت یک منبع اطلاعاتی را اندازه‌گیری می‌کند. این نظریه بعدها در فشرده‌سازی داده، ارتباطات دیجیتال، رمزنگاری و بسیاری از حوزه‌های فناوری مورد استفاده قرار گرفت.
 </div>
 
 </div>
@@ -647,14 +635,12 @@ rel="noopener noreferrer">
 📄 مشاهده PDF
 </a>
 
-<button class="summary-btn" onclick="requestSummary('adam')">
+<button
+class="summary-btn"
+onclick="requestSummary('adam')">
 🔐 مشاهده خلاصه
 </button>
 
-</div>
-
-<div class="summary" id="summary-adam">
-Adam یک الگوریتم بهینه‌سازی برای آموزش شبکه‌های عصبی است که ایده‌هایی از روش‌های Momentum و Adaptive Learning Rate را ترکیب می‌کند. Adam برای هر پارامتر نرخ یادگیری مناسب‌تری در نظر می‌گیرد و به همین دلیل در بسیاری از پروژه‌های یادگیری عمیق به‌عنوان یک انتخاب مناسب برای آموزش مدل استفاده شده است.
 </div>
 
 </div>
@@ -687,21 +673,18 @@ rel="noopener noreferrer">
 📄 مشاهده PDF
 </a>
 
-<button class="summary-btn" onclick="requestSummary('alexnet')">
+<button
+class="summary-btn"
+onclick="requestSummary('alexnet')">
 🔐 مشاهده خلاصه
 </button>
 
 </div>
 
-<div class="summary" id="summary-alexnet">
-AlexNet یک شبکه عصبی کانولوشنی عمیق بود که در مسابقه ImageNet عملکرد بسیار قدرتمندی نشان داد. استفاده از CNN عمیق، GPU و روش‌هایی مانند ReLU و Dropout باعث شد این مدل در تشخیص تصاویر بسیار موفق شود و موج جدیدی از تحقیقات در حوزه Deep Learning و Computer Vision شکل بگیرد.
-</div>
-
 </div>
 
 
 </div>
-
 </main>
 
 
@@ -710,7 +693,7 @@ AlexNet یک شبکه عصبی کانولوشنی عمیق بود که در مس
 </footer>
 
 
-<!-- PASSWORD MODAL -->
+<!-- PASSWORD WINDOW -->
 
 <div class="modal" id="passwordModal">
 
@@ -727,47 +710,168 @@ id="passwordInput"
 class="password-input"
 type="password"
 placeholder="رمز عبور"
-onkeydown="if(event.key==='Enter') checkPassword()"
->
+autocomplete="off"
+onkeydown="if(event.key==='Enter') checkPassword()">
 
-<button class="unlock" onclick="checkPassword()">
+<button
+class="unlock"
+onclick="checkPassword()">
 باز کردن خلاصه
 </button>
 
-<button class="cancel" onclick="closeModal()">
+<button
+class="cancel"
+onclick="closeModal()">
 انصراف
 </button>
 
-<div class="error" id="passwordError">
+<div
+class="error"
+id="passwordError">
 ❌ رمز اشتباه است.
 </div>
 
 </div>
-
 </div>
 
 
 <script>
 
-/* =========================
-   PASSWORD SECURITY
-========================= */
+/* ==========================================
+   ENCRYPTED SUMMARIES
+   AES-GCM + PBKDF2
+   ========================================== */
 
-/*
-   SHA-256 رمز عبور.
-   رمز واقعی داخل کد نوشته نشده است.
-   
-   رمز فعلی:
-   RADMAN2026
-*/
+const SUMMARY_DATA = {
 
-const PASSWORD_HASH =
-"bd45d791d8c474bfb8b4bbce112b628631a223fe53d75e7eac4c89d7bb9adbdf";
+transformer:{
+iv:"3nAywPOAZgGX1Djx",
+data:"Gf0XVOFx4yLocPaAp2rl5viC3++IvtlR044mjc+ud9cED2he4RBmwSlFVmgxwIwbTnxqamCq7Cu/rqIcO4RRax8yV3blVDXlah++Tyg91FzwVp6pf6YG5rQsYuETiBLGONwdFdRm4AzxRAGsvUwLBULdp/2NDzhy2p60O2QnEPTYHLS0dkg4HbwQfIM1tZIdm6JxtwZ0IapQxXer55TMzOslpp5npAv3NeK9uMgddR+/t3Lb5Z8a+b84+U7V9M1zjaMqIxPtAjAheWsvzY57iZuAKPBBAGRGE0egA/bY5n6a2dwjqMtRc0Ig4Pk7YGaq/vhzjUXkB87Yx54/ICAwb8r8YvDdehUYequGRn6ykk5PHmourfMqES+5inm5050iMOE6XmRpWEDQuR8x7QI/cnMdnCSRuR+cDiNDODvxXFzXmD5i77brbYaGTotglFOyOZaXwCYYwBUMehl0ZijqxTtSR2ATtTKYGSNZ7NyaCk5kQ5gqYwqN6ZZy1EiiRr1h3RtVEvXAJ3oC5pKk7ukL6H6pX+rGfip8d4qwXj8z+XA+NTCHAV9XifGP50F5uv2lM4j0VY0Urk+baXV+aE0O8XGqTAbv7v+1gwKfdQx8UBKUyyABQD+CMDxeuHYUwrfT+orOFqRLz07+t5mElG9yEow1hdiMya34BzTsnLvy2aI3jkN7rHTCVryvLIBgcPMdzR1PFxgTX/SW8oNRkz90SU6wdxmCLo4="
+},
+
+gan:{
+iv:"m3fi9fu+QrokPKqB",
+data:"EL+5Ux7Sf8GheIQ24ptvEClP26BXB7aneG/VHchEsXpnnufRDzK76D+yG7eJz2bdekBSz5n/0Mpzx5MT20UNjYdhv0pgD0NiZUEmIO6qCOjcmbUxGqlpKLD7jqdLWJXLuue7vqUcpcufLJbOES+dWdJMuP6WX22nSjaO8OVhVZIAGDFXOpqFvhly598O3AioYOpYPOwBTVPJgqYgqGRx3Eo+wNL9wkX3r3uApFXRV5O5GGwsQsQ7vigYPMkgHiUjxYafpz5hbD5P5suNhQypdXfjN6m1ARTUuZx8vYvfx3hEiIL7UzCWhB6DvXcXGM9/RyfBCrzZgrh8/cEepcYvFwAoEYapGk1Zz2+3VvkVVqGswOpvZXr/tSlBvLAY3MIPpKotKvDUQk2OlrxUyFyUF+j5266RO1MPGUH0GJJebPiy0UhSoC4Ltc3vbmB/T3tPvjFeQaUjYKiv9Po8/fdQRclCiS5XPevD1GjXgfnYWOiI3n/K27A1MVOIJ+MBg2vSFi1aCSRjdoP6cTTQZh2fAd0WHH+D73L1MlH12y3ZuKjznzfQiitYPazY/ihzbV3/rFNfRND5UaHzLU1UiBTVz5FxhMOmHbYSnYVzR9fb+LbH23tEz4nLJGaIzvLJ8KmHKjBG62JmaXTjyrbwIYU2"
+},
+
+resnet:{
+iv:"w4glg2Az1F9TDaPa",
+data:"O3Ca86h+5Sb5ltqcP9TutYCYOfy/An4VEOecSXYl7aqRgmyThPJ7b+rMqu1D63cdf6KfLj69MQRKQzCWXrkKzwVmIP8fqZWlH5m+qg8VFraxK/tW8w8pql5F23nOOBvqAtcB3qJ+oNSZMHSPhcOuV2EiSJYNco0USBQrxth4+IUl3AAdDAG4K2+jQ9tUV7zXL97UDO0+mL8v5JG9O5Ngsu4s4zS2ZNl7BALyubfZuFKbfFcnlb3UYuG1pqvQs/+74VZFBa91+HlBZs/Sq5eYm6rbxC41iXTEIPxUV3QjGIJGq2Yi9vlIyp818IVQYrTpx4WnxmtNyThpk+5Qj5o41UjO6d/rnaQESsQoBUjL9rMIi+yxXLFKFkjjwBgs/5rg3jXmpx/Xy4FvlAavgaPwSynVhGVKZOgzJRm45p3n1w2H72vXsOrzNsDYG0mRYjZDxhCYoR2vHet0mjhqoAsc1TroNki3wkaNl6rRUd1AWlzg7+S1P0FiaPWl5UjinTig4O95mespb07QZEn16jaI8dwEuJYSSiEfciUkuhD4t8vEa29K+v0uuQwY0qWijKCSMqHtIhZsNit0EDj84cZGPuMU3uKSp8R3wPoYg8+bzaipupq7/AX1MmEZ7zh0WAjHUlVkqfmQPz9sFYRY/Dy5kPz/4eXgkt0lAA=="
+},
+
+mapreduce:{
+iv:"TOpAVJz4HBfHQh00",
+data:"OnQCG2O2Y8Qu7QvXob7/ez+w8FxqUeqBCEIYx8LgpcG288ter7KgdH/nUd20s0T5twVktxGJSXZx+nG+vYlrYsOMvutkW3MHmUdi9Py5kpFOXXZ4Y3epwl6JA5xV0wNKwdo01PUMOtQqW3TxjPQoLvoE9a7QeVn/hWNl5kNUNfAL1C+1ek0bmm5UUEm4gXN4LaeFCoVhpRMrPYb8qSGYL+9iDrC8PVGnH7D8yEveY31vRArTyHKO/R4avfeDqerxF/a8e/tPUlFOkAO5EnqYhSp1IlA2xpi3MuYI1qawpa0JJEqjV4GxnJ49MbjCN8gpJA3EIGBiH0d+nhtHSKcOuBjocmfUz9twyP4wHeGZ2zlJvfoUCnEQ1qdNCXLwlkIuWgVFB+pvmFFwXk9xoHdCnqSr0roIOSgntD9yjvGEs2HsEnyLe2oZlZVpWtGB5x4ge2aZZ9rh4yeLbsLGdg0pH31ejZjLUg1OCmiL+coBzNqM/D6zyt8HW0kimntQOHp9fODmIAz5KLgjIOiTek5wcTiFKWWhv6gqhbdTmzEBySfeoB2rOBB0DthdTpeBlTjeRfmBx0pZctaywYPfpVGAVCPpe1UefEN4NEkLsyP/aDQQ9msRUN5OQa6YJQuEABKv7bnPsz1sNT10Kg3KF3PnElHAbJEhLAnJD1MfugTT/BqvNgDf8D3Wu7tcaBq"
+},
+
+bert:{
+iv:"llzzB/2P5zKdOH39",
+data:"NnI0Jn7EKcJHcezGnNvHow40OK6t7W2a+DlMTaPP9THSJprNAYKYQYjGIY5/idqP9EooqDske3Mwyf8N8rYtIwL0jfmE/g41Pb7/YyZYPf2oL8JNF23+fOB8Xhj1v4I1Vj2htYZcVnDm90f4WNSEEXm5PGw/npnNItXV7wdad/Yv9KXurBb7dzMNVImgae06bNGTHLMlCvZgKB9pEPteLStBxzdEM6dPxdWI+FZQiN5NbYaBHWsiCw6N4X3L5tIlxF9/XIfjF6mQrInBP/nVCko1ncisMGT9HfqBmUe5SnE+/XHIo5J6Do52Zi3/MxbzlN0p1W0JCkNE1/0uCsKVBrNZcGAqx8GGyCy9uBvHVXx3zfie9cZEgtgZgwB46C8XCG/A2qFjRE/oY1QPE39lJN+P6q5E4kZ/DUg8Lw+KMXgcDh1W4C0oZg/asGeQiNsju4Mv2F0LNBov6qrYcKh2Bk+eI8txFwcgsoonPkQ/23GmCUPt5OMNrjKed2BYe5jxaOqGw6yw/n+BV0Ql9/LKeTr075N5b5ZhObpzq11a+Ov2kt/3s82awIMTawBiT1DDTnVfFZvOc3OQCx5+oqHIdw/ig6yS9f4/NBzahUypeYzRVmGljMF1U6a1ZUWY2oyVtiUDytm+7wWfl2Rs8VjqJL6oh0S8pVZQgFjmJ3lDFhQ2"
+},
+
+shannon:{
+iv:"RO3ToFIMekNBqO3B",
+data:"G0Czefq3pSNO13C20PBjw6Jf79Gi7lzcq+AS/++WXLyI8TEvTBtogxCuXen3DRjbtjRZyBRpzH/iMJpRGXDcsmwz9iM0CrKPrC63beNna+f66SjMe6HJloYqCQlol0pCl6REZC8l/kTliXfwhyCo7g9lzXlMpx9BoKatrKg2Q2NIAQb5jVJp6D2X4s6X3V6MH1RrINKeCGKvd8n56zKSu8YCm+p1T/Lf5TfL176jJdRchUMN5oVzgxMn6MdkLOMf7Dz30i2W864xg8/MKOah0gDr2VFAp3JcZZkoB6WI+OL4eyl9ZivXpMVZP+LR0/2iceadVq1XUIt7EwscfFsfhNcEbCobGTpw7Huc/o/hIsNbbQWBNJ7pOWyMu9FM4az1HBBU0erA65tYDEi29NE/DM9ysdcaiJ2mcoYgTgKDWp05a2K9SqOar6Sj4Mc7Q5r5gtesw5Pk023RY90SphIicTFfI+Tt8Y9fOJo5xO8Zj0m1YjRuNpFTsHppw8lHUnMISYNmVLPLfMUN8Fvag4UPKuc9vp1IA+XmpqdBk63ZpW2zuep5aTCEhwr8uFshEJz0MZmgcjKSVcLMPp8Hz6rrhNsWZjdag+kuJ1nO4LtF5J0VsQqoqyIxGMOAaLertSDBi3f7bFx0tSOpD+Jm4hADUtg+M5Sa7ez1wBa1t/NA="
+},
+
+adam:{
+iv:"DJ2jvidMdbCQEPhG",
+data:"lqrgOUeEBs/sONrtXZJIpx6pqXSpndtDueszp3fdBM5+3fS83TIqxDmQiXpUlkCqwjpxO1+OufIZaxH0+7CWqSMnleg4pHIvGXGwYUxcwYEV8Rggvsb9PW1Sc5oO4qkto8b46ikDFLjfCHpmwYZwonyv67n3Q7KigvjiLSwFEKlvzPLJqo6dGsVWie8AFMhJINmwIN8gvUIY+KZtYK/+RNrXO5UKwCqFMCJny80JxfjprkiFDkAdpbF1a698x6X7DuXSz+IkiBCOpMpzINE1zYB/0kv0InLbrpjKKkhhksM35KR5dWvADWEfXY8pbCyVyV7mDwYyiKoJtlVY9kWBmBdoPpdC1AvSClSigFsKCnjyJmq/aMUgtXcmxizJ2aPB1jM/zMOK4ae/4KFvtCKqQ983nqJCr/6GHnTjK0mTsymEio5TOYcOcQDachbnbh7aPrZDnqata7jJLvp/ukw+Q9c9e/8CPJxi6TWzOfl5TKXbxgYsegIiwqEBh9aY+LXwnTyP5rLjh38MorXzuXWAqWCnppd0xznCHTsw6rGzFK2HEiKyfKg9+KYnXao0Obm/ZUByIxLhOclYn3ef5hUEocLDpbOAUktwRlNvUGNWz5uAALuR+fWNgrLORBt8/zOkJiK3TxBOXZ/OZ2zFgjKO8TFCFbaMIwqY5dfYv6uJ3CjxkeBxbkLng5ySSFWyYRotT48O"
+},
+
+alexnet:{
+iv:"rQwR5c0LgWDJPHhF",
+data:"1vglEXF4b7w571QE3GLzD6OEeS8+QIbidtBMbgTeuJswIfTkGE+WZ6O6Tf33SO0dFqThD8JmwqCzfBKG6bc25g98hfi8D1F1gik79Fpl4K05ZfbchttmhCXJI9qZIMp6SISrp9KW7ATjDaVgxI9NpAvhl/yhdPeJjIjSEaXkgKUeUY7X4OdXsL14SGO9eab74WJL4AaZHuM9STAs9SjdLZfXGX8n3oZ//LJo0PWX4I85aRJEhlgtPK+vWTMc5b9XT7aJwzXIrUkyh76MAo2SU0sOx9k9deh7jrn7fRY2JzNYzxzgBzZtKBUInRXUyptB2e4PnVriNt5HiLfXBnii9Cn2CMbMkYkuwRFUswaaMjFtF9aw/idrgTNtxNjY5QxI2xFTswW/YQN0q2IAbcsuV6kaCGh36JT5t/DejjybVyisbydXiVvfU3qd6sQn7iVe0Mr3UfE+4SuJt6+z/CwcDwHRRLoPHzN1mDvwkmsEpoEqIyO0o+h6k4nszTuswGqVe2JFuHHwDSo6U7HxlgqyJGWBP1KSU1hC4ww7y9Bm1dI2UuP82F3ugertRE9eVE2pk5mh72S5lK+g5OT92M0PF/w="
+}
+
+};
+
+const SALT =
+"cXwY2vsBXTDcZia5TBmIBg==";
 
 let selectedSummary = null;
 
 
-/* درخواست مشاهده خلاصه */
+/* Base64 → Bytes */
+
+function base64ToBytes(base64){
+
+    const binary = atob(base64);
+
+    const bytes =
+        new Uint8Array(binary.length);
+
+    for(let i=0;i<binary.length;i++){
+        bytes[i] =
+            binary.charCodeAt(i);
+    }
+
+    return bytes;
+}
+
+
+/* ساخت کلید */
+
+async function deriveKey(password){
+
+    const encoder =
+        new TextEncoder();
+
+    const keyMaterial =
+        await crypto.subtle.importKey(
+            "raw",
+            encoder.encode(password),
+            "PBKDF2",
+            false,
+            ["deriveKey"]
+        );
+
+    return crypto.subtle.deriveKey(
+        {
+            name:"PBKDF2",
+            salt:base64ToBytes(SALT),
+            iterations:200000,
+            hash:"SHA-256"
+        },
+        keyMaterial,
+        {
+            name:"AES-GCM",
+            length:256
+        },
+        false,
+        ["decrypt"]
+    );
+
+}
+
+
+/* رمزگشایی */
+
+async function decryptSummary(password,id){
+
+    const item =
+        SUMMARY_DATA[id];
+
+    const key =
+        await deriveKey(password);
+
+    const decrypted =
+        await crypto.subtle.decrypt(
+            {
+                name:"AES-GCM",
+                iv:base64ToBytes(item.iv)
+            },
+            key,
+            base64ToBytes(item.data)
+        );
+
+    return new TextDecoder()
+        .decode(decrypted);
+
+}
+
+
+/* درخواست رمز */
 
 function requestSummary(id){
 
@@ -794,35 +898,6 @@ function requestSummary(id){
 }
 
 
-/* تبدیل رمز واردشده به SHA-256 */
-
-async function hashPassword(password){
-
-    const data =
-        new TextEncoder().encode(password);
-
-    const hashBuffer =
-        await crypto.subtle.digest(
-            "SHA-256",
-            data
-        );
-
-    const hashArray =
-        Array.from(
-            new Uint8Array(hashBuffer)
-        );
-
-    return hashArray
-        .map(
-            b => b
-            .toString(16)
-            .padStart(2,"0")
-        )
-        .join("");
-
-}
-
-
 /* بررسی رمز */
 
 async function checkPassword(){
@@ -832,33 +907,71 @@ async function checkPassword(){
         .getElementById("passwordInput")
         .value;
 
-    const hash =
-        await hashPassword(input);
+    try{
 
-    if(hash === PASSWORD_HASH){
+        const text =
+            await decryptSummary(
+                input,
+                selectedSummary
+            );
 
         closeModal();
 
-        const summary =
-            document
-            .getElementById(
-                "summary-" + selectedSummary
-            );
+        showSummary(
+            selectedSummary,
+            text
+        );
 
-        summary.classList.add("show");
-
-        summary.scrollIntoView({
-            behavior:"smooth",
-            block:"center"
-        });
-
-    }else{
+    }catch(error){
 
         document
             .getElementById("passwordError")
             .style.display = "block";
 
     }
+
+}
+
+
+/* نمایش خلاصه فقط پس از رمزگشایی */
+
+function showSummary(id,text){
+
+    let box =
+        document.getElementById(
+            "summary-" + id
+        );
+
+    if(!box){
+
+        box =
+            document.createElement("div");
+
+        box.id =
+            "summary-" + id;
+
+        box.className =
+            "summary";
+
+        const button =
+            document.querySelector(
+                `[onclick="requestSummary('${id}')"]`
+            );
+
+        button
+            .parentElement
+            .appendChild(box);
+
+    }
+
+    box.textContent = text;
+
+    box.classList.add("show");
+
+    box.scrollIntoView({
+        behavior:"smooth",
+        block:"center"
+    });
 
 }
 
@@ -874,17 +987,20 @@ function closeModal(){
 }
 
 
-/* بستن با کلیک بیرون */
+/* کلیک بیرون پنجره */
 
 document
 .getElementById("passwordModal")
-.addEventListener("click",function(e){
+.addEventListener(
+    "click",
+    function(e){
 
-    if(e.target === this){
-        closeModal();
+        if(e.target === this){
+            closeModal();
+        }
+
     }
-
-});
+);
 
 
 /* =========================
@@ -903,18 +1019,18 @@ function filterPapers(category,element){
 
     document
         .querySelectorAll('.card')
-        .forEach(card => {
+        .forEach(card=>{
 
             if(
                 category === 'all' ||
                 card.dataset.category === category
             ){
 
-                card.style.display = 'block';
+                card.style.display='block';
 
             }else{
 
-                card.style.display = 'none';
+                card.style.display='none';
 
             }
 
@@ -929,7 +1045,7 @@ function filterPapers(category,element){
 
 function searchPapers(){
 
-    let query =
+    const query =
         document
         .getElementById('search')
         .value
@@ -937,9 +1053,9 @@ function searchPapers(){
 
     document
         .querySelectorAll('.card')
-        .forEach(card => {
+        .forEach(card=>{
 
-            let text =
+            const text =
                 card.innerText.toLowerCase();
 
             card.style.display =
@@ -954,447 +1070,4 @@ function searchPapers(){
 </script>
 
 </body>
-</html>    cursor:pointer;
-    transition:.2s;
-}
-
-.category:hover,
-.category.active{
-    background:#7157ff;
-    color:white;
-}
-
-/* PAPERS */
-
-.container{
-    padding:25px 8% 80px;
-}
-
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:22px;
-}
-
-.card{
-    background:linear-gradient(145deg,#12172a,#0e1220);
-    border:1px solid #252b45;
-    border-radius:22px;
-    padding:25px;
-    transition:.3s;
-    position:relative;
-    overflow:hidden;
-}
-
-.card:hover{
-    transform:translateY(-7px);
-    border-color:#7157ff;
-    box-shadow:0 15px 45px #0008;
-}
-
-.badge{
-    display:inline-block;
-    padding:6px 12px;
-    border-radius:20px;
-    background:#7157ff22;
-    color:#9c8cff;
-    font-size:12px;
-}
-
-.card h2{
-    margin-top:18px;
-    font-size:20px;
-    line-height:1.6;
-}
-
-.author{
-    color:#747c98;
-    font-size:13px;
-    margin-top:8px;
-}
-
-.description{
-    color:#aab0c3;
-    line-height:1.9;
-    font-size:14px;
-    margin:15px 0 22px;
-}
-
-.pdf{
-    display:block;
-    text-align:center;
-    text-decoration:none;
-    background:linear-gradient(90deg,#7157ff,#4c9dff);
-    color:white;
-    padding:12px;
-    border-radius:12px;
-    font-weight:600;
-    transition:.2s;
-}
-
-.pdf:hover{
-    transform:scale(1.02);
-}
-
-/* FOOTER */
-
-footer{
-    border-top:1px solid #20263d;
-    text-align:center;
-    padding:30px;
-    color:#686f88;
-    font-size:13px;
-}
-</style>
-</head>
-
-<body>
-
-<header>
-
-    <div class="logo">
-        Paper<span>Vault</span> 📚
-    </div>
-
-    <div class="hero">
-        <h1>مقاله‌های بزرگ<br>دنیای علم</h1>
-
-        <p>
-            مجموعه‌ای از مقالات معروف و تأثیرگذار در حوزه‌های
-            هوش مصنوعی، کامپیوتر، فیزیک و ریاضیات.
-        </p>
-
-        <div class="search">
-            <input
-                id="search"
-                type="text"
-                placeholder="جستجوی مقاله..."
-                oninput="searchPapers()"
-            >
-            <button>جستجو</button>
-        </div>
-    </div>
-
-</header>
-
-<div class="categories">
-
-    <div class="category active" onclick="filterPapers('all',this)">
-        همه
-    </div>
-
-    <div class="category" onclick="filterPapers('ai',this)">
-        🤖 هوش مصنوعی
-    </div>
-
-    <div class="category" onclick="filterPapers('computer',this)">
-        💻 علوم کامپیوتر
-    </div>
-
-    <div class="category" onclick="filterPapers('math',this)">
-        📐 ریاضیات
-    </div>
-
-    <div class="category" onclick="filterPapers('physics',this)">
-        ⚛️ فیزیک
-    </div>
-
-</div>
-
-<main class="container">
-
-<div class="grid" id="papers">
-
-<!-- PAPER 1 -->
-
-<div class="card" data-category="ai">
-
-<span class="badge">🤖 هوش مصنوعی</span>
-
-<h2>
-Attention Is All You Need
-</h2>
-
-<div class="author">
-Ashish Vaswani et al. — 2017
-</div>
-
-<p class="description">
-مقاله معروفی که معماری Transformer را معرفی کرد؛
-پایه‌ای برای بسیاری از مدل‌های زبانی مدرن.
-</p>
-
-<a
-class="pdf"
-href="https://arxiv.org/pdf/1706.03762"
-target="_blank">
-📄 مشاهده PDF
-</a>
-
-</div>
-
-
-<!-- PAPER 2 -->
-
-<div class="card" data-category="ai">
-
-<span class="badge">🤖 هوش مصنوعی</span>
-
-<h2>
-Generative Adversarial Nets
-</h2>
-
-<div class="author">
-Ian Goodfellow et al. — 2014
-</div>
-
-<p class="description">
-مقاله‌ای بنیادی درباره GANها که روش جدیدی
-برای تولید داده‌های مصنوعی با شبکه‌های عصبی ارائه کرد.
-</p>
-
-<a
-class="pdf"
-href="https://arxiv.org/pdf/1406.2661"
-target="_blank">
-📄 مشاهده PDF
-</a>
-
-</div>
-
-
-<!-- PAPER 3 -->
-
-<div class="card" data-category="ai">
-
-<span class="badge">🤖 هوش مصنوعی</span>
-
-<h2>
-Deep Residual Learning for Image Recognition
-</h2>
-
-<div class="author">
-Kaiming He et al. — 2015
-</div>
-
-<p class="description">
-مقاله معروف ResNet که با معرفی
-Residual Learning آموزش شبکه‌های عمیق را آسان‌تر کرد.
-</p>
-
-<a
-class="pdf"
-href="https://arxiv.org/pdf/1512.03385"
-target="_blank">
-📄 مشاهده PDF
-</a>
-
-</div>
-
-
-<!-- PAPER 4 -->
-
-<div class="card" data-category="computer">
-
-<span class="badge">💻 علوم کامپیوتر</span>
-
-<h2>
-MapReduce: Simplified Data Processing
-</h2>
-
-<div class="author">
-Jeffrey Dean & Sanjay Ghemawat — 2004
-</div>
-
-<p class="description">
-یک مدل مهم برای پردازش حجم بسیار زیاد داده
-در سیستم‌های توزیع‌شده.
-</p>
-
-<a
-class="pdf"
-href="https://research.google.com/archive/mapreduce-osdi04.pdf"
-target="_blank">
-📄 مشاهده PDF
-</a>
-
-</div>
-
-
-<!-- PAPER 5 -->
-
-<div class="card" data-category="ai">
-
-<span class="badge">🤖 هوش مصنوعی</span>
-
-<h2>
-BERT: Pre-training of Deep Bidirectional Transformers
-</h2>
-
-<div class="author">
-Jacob Devlin et al. — 2018
-</div>
-
-<p class="description">
-یکی از مقالات مهم NLP که روش
-پیش‌آموزش دوطرفه Transformer را معرفی کرد.
-</p>
-
-<a
-class="pdf"
-href="https://arxiv.org/pdf/1810.04805"
-target="_blank">
-📄 مشاهده PDF
-</a>
-
-</div>
-
-
-<!-- PAPER 6 -->
-
-<div class="card" data-category="math">
-
-<span class="badge">📐 ریاضیات</span>
-
-<h2>
-A Mathematical Theory of Communication
-</h2>
-
-<div class="author">
-Claude Shannon — 1948
-</div>
-
-<p class="description">
-مقاله تاریخی کلود شنون که پایه‌های نظریه اطلاعات
-و بسیاری از مفاهیم ارتباطات دیجیتال را بنا کرد.
-</p>
-
-<a
-class="pdf"
-href="https://people.math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf"
-target="_blank">
-📄 مشاهده PDF
-</a>
-
-</div>
-
-
-<!-- PAPER 7 -->
-
-<div class="card" data-category="ai">
-
-<span class="badge">🤖 هوش مصنوعی</span>
-
-<h2>
-Adam: A Method for Stochastic Optimization
-</h2>
-
-<div class="author">
-Diederik Kingma & Jimmy Ba — 2014
-</div>
-
-<p class="description">
-معرفی الگوریتم Adam؛ یکی از محبوب‌ترین
-روش‌های بهینه‌سازی در یادگیری عمیق.
-</p>
-
-<a
-class="pdf"
-href="https://arxiv.org/pdf/1412.6980"
-target="_blank">
-📄 مشاهده PDF
-</a>
-
-</div>
-
-
-<!-- PAPER 8 -->
-
-<div class="card" data-category="ai">
-
-<span class="badge">🤖 هوش مصنوعی</span>
-
-<h2>
-ImageNet Classification with Deep CNNs
-</h2>
-
-<div class="author">
-Alex Krizhevsky et al. — 2012
-</div>
-
-<p class="description">
-مقاله معروف AlexNet که نقطه عطفی در
-رشد شبکه‌های عصبی کانولوشنی و Computer Vision بود.
-</p>
-
-<a
-class="pdf"
-href="https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf"
-target="_blank">
-📄 مشاهده PDF
-</a>
-
-</div>
-
-</div>
-
-</main>
-
-<footer>
-© 2026 Radjal Group - All Rights Reserved
-</footer>
-
-
-<script>
-
-function filterPapers(category,element){
-
-    document.querySelectorAll('.category')
-    .forEach(x=>x.classList.remove('active'));
-
-    element.classList.add('active');
-
-    document.querySelectorAll('.card')
-    .forEach(card=>{
-
-        if(category==='all' ||
-           card.dataset.category===category){
-
-            card.style.display='block';
-
-        }else{
-
-            card.style.display='none';
-
-        }
-
-    });
-
-}
-
-
-function searchPapers(){
-
-    let query =
-        document.getElementById('search')
-        .value
-        .toLowerCase();
-
-    document.querySelectorAll('.card')
-    .forEach(card=>{
-
-        let text=card.innerText.toLowerCase();
-
-        card.style.display =
-            text.includes(query)
-            ? 'block'
-            : 'none';
-
-    });
-
-}
-
-</script>
-
-</body>
-</html>
+    </html>
